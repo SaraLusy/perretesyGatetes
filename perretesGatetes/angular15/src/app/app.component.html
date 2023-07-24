@@ -1,0 +1,64 @@
+
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="side" opened class="sidenav">
+    <img src="./assets/images/logo-sf.png" class="center_logo" alt="Logo">
+    <mat-toolbar class="menu">
+      <span>Inicio</span>
+      <span class="spacer"></span>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <mat-list-item class="option" routerLink="./customer">
+        <mat-icon matListItemIcon>local_mall</mat-icon>
+        <span class="space"></span>
+        <span>Cliente</span>
+      </mat-list-item>
+
+      <mat-list-item  class="menu" routerLink="./staff ">
+        <mat-icon matListItemIcon>engineering</mat-icon>
+        <span class="space"></span>
+        <span>Empleados</span>
+      </mat-list-item>
+
+      <mat-list-item class="menu" routerLink="./financial">
+        <mat-icon matListItemIcon>query_stats</mat-icon>
+        <span class="space"></span>
+        <span>Dto. Financiero</span>
+      </mat-list-item>
+
+      <mat-list-item class="menu" routerLink="./admin">
+        <mat-icon matListItemIcon>settings</mat-icon>
+        <span class="space"></span>
+        <span>Administración</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-toolbar class="main-toolbar">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="title mr-4">Pets & More</h1>
+    <span class="version">Versión {{ version }}</span>
+    <span class="spacer"></span>
+    <h3 class="name-toolbar">{{ fullName }}</h3>
+    <mat-icon class="icon">person</mat-icon>
+    <a mat-button href="./logout">
+      <mat-icon class="icon">power_settings_new</mat-icon>
+    </a>
+  </mat-toolbar>
+
+  <div class="container p-3" *ngIf ="usuarioService.getRol() != null">
+    <router-outlet></router-outlet>
+  </div>
+  <div *ngIf ="usuarioService.getRol() == null">
+    <h2 class="text_sidenav">{{ unauthorizedMsg }}</h2>
+  </div>
+
+</mat-sidenav-container>
+
+
+

@@ -1,0 +1,56 @@
+//*{
+//  border: solid red;
+//}
+
+.sidenav {
+  width: 280px;
+  background: #D2834D;
+  color: white;
+}
+
+.main-toolbar{
+  background: #fbe5d6;
+  height: 80px;
+}
+.center_logo{
+  display: block;
+  margin: 10px auto;
+  width: 140px;
+  background: #fbe5d6;
+  border-radius: 100px;
+}
+.menu{
+  background: #D2834D;
+  color: white;
+  font-size: 20px;
+  font-stretch: expanded;
+}
+.option{
+  color: white;
+}
+
+.title {
+  margin-top: 12px;
+  margin-left: 10px;
+}
+
+.version {
+  font-size: 15px;
+}
+
+.name-toolbar{
+  margin-top: 18px;
+  margin-right: 20px;
+}
+
+.icon{
+  font-size: 35px;
+  padding: 8px;
+  vertical-align: middle;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}

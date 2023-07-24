@@ -1,0 +1,25 @@
+.table-realizar-pedido{
+  border: solid 0.2px;
+  width: 100%;
+}
+
+.position-btn{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+}
+
+.btn-confirm{
+  background-color: #A9DFBF;
+  border: solid 0.3px #229954;
+  font-size: 16px;
+}
+
+.btn-cancel{
+  background-color: #F1948A;
+  color: white;
+  font-size: 16px;
+}
+

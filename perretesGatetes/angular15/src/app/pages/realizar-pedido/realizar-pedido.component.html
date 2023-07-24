@@ -1,0 +1,68 @@
+<h1>Realizar pedido</h1>
+<mat-divider></mat-divider>
+
+<table class="table-realizar-pedido mt-3">
+  <thead>
+    <th>Código Artículo</th>
+    <th>Nombre</th>
+    <th>Cantidad</th>
+    <th>Precio(€)</th>
+  </thead>
+  <td></td>
+</table>
+
+<table mat-table class="mat-elevation-z8" matSort
+       (matSortChange)="announceSortChange($event)">
+
+  <ng-container matColumnDef="proposalCode">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="content-header-table"> Código artículo </th>
+    <td mat-cell *matCellDef="let element" class="content-row"> {{element.proposalCode}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="content-header-table"> Descripcion </th>
+    <td mat-cell *matCellDef="let element" class="content-row"> {{element.description}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="brandCode">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="content-header-table"> Marca </th>
+    <td mat-cell *matCellDef="let element" class="content-row"> {{element.grouping.brand.description}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="familyCode">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="content-header-table"> Familia </th>
+    <td mat-cell *matCellDef="let element" class="content-row"> {{element.family.description}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="code">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="content-header-table"> Agrupamiento </th>
+    <td mat-cell *matCellDef="let element" class="content-row"> {{element.groupingCode}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="editar">
+    <th mat-header-cell *matHeaderCellDef class="content-header-table"> Ver/Editar </th>
+    <td mat-cell *matCellDef="let element" class="content-row">
+<!--      <button style="color:#5C5C5C" mat-icon-button color="red" (click)="verPropuesta(element)">-->
+<!--        <mat-icon>visibility</mat-icon>-->
+<!--      </button>-->
+<!--      <button style="color:#5C5C5C" mat-icon-button color="red" (click)="editar(element)">-->
+<!--        <mat-icon>edit</mat-icon>-->
+<!--      </button>-->
+
+    </td>
+  </ng-container>
+
+<!--  <tr mat-header-row *matHeaderRowDef="displayedColumns" class="header-table"></tr>-->
+<!--  <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="{{row.tipo}} mat-row"></tr>-->
+</table>
+
+<div class="position-btn">
+  <button mat-raised-button class="btn-confirm p-3 mt-3">
+    <mat-icon>recommend</mat-icon>
+    <span>Confirmar</span>
+  </button>
+  <button mat-raised-button class="btn-cancel p-3 mt-3 ml-3">
+    <mat-icon>cancel</mat-icon>
+    <span>Cancelar</span>
+  </button>
+</div>

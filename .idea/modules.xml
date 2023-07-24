@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/perretesGatetes/business/business.iml" filepath="$PROJECT_DIR$/perretesGatetes/business/business.iml" />
+      <module fileurl="file://$PROJECT_DIR$/perretesGatetes/domain/domain.iml" filepath="$PROJECT_DIR$/perretesGatetes/domain/domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/perretesGatetes/perretesGatetes.iml" filepath="$PROJECT_DIR$/perretesGatetes/perretesGatetes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/perretesyGatetes.iml" filepath="$PROJECT_DIR$/.idea/perretesyGatetes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/perretesGatetes/persistence/persistence.iml" filepath="$PROJECT_DIR$/perretesGatetes/persistence/persistence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/perretesGatetes/rest/rest.iml" filepath="$PROJECT_DIR$/perretesGatetes/rest/rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/perretesGatetes/web/web.iml" filepath="$PROJECT_DIR$/perretesGatetes/web/web.iml" />
+    </modules>
+  </component>
+</project>

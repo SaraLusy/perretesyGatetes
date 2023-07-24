@@ -1,0 +1,61 @@
+<h1>Historial pedidos realizados</h1>
+<mat-divider></mat-divider>
+
+<table>
+  <thead>
+  <th>Código Pedido</th>
+  <th>Fecha pedido</th>
+  <th>Entrega estimada</th>
+  <th>Importe total(€)</th>
+  <th>Estado</th>
+  </thead>
+  <td></td>
+</table>
+
+<table mat-table class="mat-elevation-z8" matSort
+       (matSortChange)="announceSortChange($event)">
+
+  <ng-container matColumnDef="codigoPedido">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="content-header-table"> Código pedido </th>
+    <td mat-cell *matCellDef="let item" class="content-row"> {{item.codigoPedido}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="fechaPedido">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="content-header-table"> Fecha pedido </th>
+    <td mat-cell *matCellDef="let item" class="content-row"> {{item.fechaPedido}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="fechaModificacion">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="content-header-table"> Fecha modificación </th>
+    <td mat-cell *matCellDef="let item" class="content-row"> {{item.fechaModificacion}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="importe">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="content-header-table"> Importe </th>
+    <td mat-cell *matCellDef="let item" class="content-row"> {{item.importe}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="ver">
+    <th mat-header-cell *matHeaderCellDef class="content-header-table"> Mostrar </th>
+    <td mat-cell *matCellDef="let item" class="content-row">
+      <button style="color:#5C5C5C" mat-icon-button (click)="verPedido(item)">
+        <mat-icon>visibility</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+<!--    <tr mat-header-row *matHeaderRowDef="displayedColumns" class="header-table"></tr>-->
+<!--    <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="{{ row.tipo }} mat-row"></tr>-->
+</table>
+
+<!--*ngIf="dataSource.data.length == 0"-->
+<div class="no-registros">
+  <p>No se han encontrado registros para los filtros seleccionados</p>
+</div>
+
+<button mat-raised-button class="btn-back p-3 mt-3">
+  <span>
+    <mat-icon>arrow_back</mat-icon>
+  </span>
+</button>
+

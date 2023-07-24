@@ -1,0 +1,44 @@
+{
+  "usuario": [
+    {
+      "codigoUsuario": 1,
+      "dni": "",
+      "nombre": "Sara",
+      "apellidos": "Perez",
+      "fechaNacimiento": "",
+      "telefono": "6598651",
+      "contrasenia": "",
+      "email": "sara@gmail.com",
+      "metodoPago": "",
+      "rol": "",
+      "direcciones": ""
+    }
+  ],
+
+  "articulo": [
+    {
+      "codigoArticulo": 1,
+      "nombre": "Correa",
+      "descripcion": "",
+      "precio": "",
+      "pesoUnitario": 16.45,
+      "especieAnimal": ""
+    },
+    {
+      "codigoArticulo": 2,
+      "nombre": "Bozal",
+      "descripcion": "",
+      "precio": "",
+      "pesoUnitario": 7.25,
+      "especieAnimal": ""
+    },
+    {
+      "codigoArticulo": 3,
+      "nombre": "Juguete",
+      "descripcion": "",
+      "precio": "",
+      "pesoUnitario": 11.25,
+      "especieAnimal": ""
+    }
+  ]
+}

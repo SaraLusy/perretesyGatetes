@@ -1,0 +1,36 @@
+#!groovy
+
+pipeline {
+    environment {
+        JAVA_TOOL_OPTIONS = "-Dhttps.protocols=TLSv1.2 -Duser.home=/var/maven"
+    }
+    agent {
+        docker {
+            image "maven:3.6.1-jdk-8"
+            label "docker"
+            args "-v /tmp/maven:/var/maven/.m2 -e MAVEN_CONFIG=/var/maven/.m2"
+        }
+    }
+
+    stages {
+        stage("Build") {
+            steps {
+                sh "mvn -version"
+                sh "mvn -f ${WORKSPACE}/bowi/pom.xml clean install -P dev"
+
+            }
+        }
+        stage('DEV Deploy') {
+            steps {
+            echo "deploying to DEV Env"
+            deploy adapters: [tomcat9(credentialsId: 'tomcat-deploy', url: 'http://10.20.101.98:8080')], contextPath: 'bowi', war: '**/bowi.war'
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
+        }
+    }
+}

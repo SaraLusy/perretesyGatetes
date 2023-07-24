@@ -1,0 +1,44 @@
+<h1>Estado pedidos</h1>
+<mat-divider></mat-divider>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort
+       (matSortChange)="announceSortChange($event)">
+
+  <ng-container matColumnDef="codigoUsuario">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="content-header-table"> Cliente </th>
+    <td mat-cell *matCellDef="let item" class="content-row"> {{ item.codigoUsuario }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="codigoPedido">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="content-header-table"> Pedido </th>
+    <td mat-cell *matCellDef="let item" class="content-row"> {{ item.codigoPedido }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="cantidad">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="content-header-table"> Nº Artículos </th>
+    <td mat-cell *matCellDef="let item" class="content-row"> {{ item.pedidoArticulo.cantidad }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="pesoTotal">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="content-header-table"> Peso (Kg) </th>
+    <td mat-cell *matCellDef="let item" class="content-row"> {{ item.pesoTotal }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="direccion">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="content-header-table"> Dirección </th>
+    <td mat-cell *matCellDef="let item" class="content-row"> {{ item.direccion.direccion }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="fechaPedido">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="content-header-table"> Fecha pedido </th>
+    <td mat-cell *matCellDef="let item" class="content-row"> {{ item.fechaPedido }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="estado">
+  </ng-container>
+</table>
+
+<!--<ul>-->
+<!--  <li *ngFor="let item of displayedColumns">{{ item }}</li>-->
+<!--</ul>-->
+
